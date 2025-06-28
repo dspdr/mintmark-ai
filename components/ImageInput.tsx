@@ -41,8 +41,8 @@ const ImageInput: React.FC<ImageInputProps> = ({ id, label, imageType, onImageSe
     <div className="p-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm bg-white dark:bg-gray-800">
       <label htmlFor={id} className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{label}</label>
       {currentPreviewUrl ? (
-        <div className="mb-2">
-          <img src={currentPreviewUrl} alt={`${label} preview`} className="max-h-48 w-full object-contain rounded-md border border-gray-200 dark:border-gray-700" />
+        <div className="mb-2 h-48 flex items-center justify-center rounded-md border border-gray-200 dark:border-gray-700 overflow-hidden">
+          <img src={currentPreviewUrl} alt={`${label} preview`} className="max-h-full max-w-full object-contain" />
         </div>
       ) : (
         <div className="h-48 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-md border-2 border-dashed border-gray-300 dark:border-gray-500 text-gray-400 dark:text-gray-500">
@@ -55,7 +55,7 @@ const ImageInput: React.FC<ImageInputProps> = ({ id, label, imageType, onImageSe
           onClick={triggerFileInput}
           className="flex-1 inline-flex items-center justify-center px-3 py-2 border border-gray-300 dark:border-gray-500 shadow-sm text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
         >
-          <UploadIcon className="w-5 h-5 mr-2" />
+          <UploadIcon className="w-4 h-4 mr-2 flex-shrink-0" />
           {t.imageInputUpload}
         </button>
         <input
@@ -71,7 +71,7 @@ const ImageInput: React.FC<ImageInputProps> = ({ id, label, imageType, onImageSe
           onClick={triggerCameraInput}
           className="flex-1 inline-flex items-center justify-center px-3 py-2 border border-gray-300 dark:border-gray-500 shadow-sm text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
         >
-          <CameraIcon className="w-5 h-5 mr-2" />
+          <CameraIcon className="w-4 h-4 mr-2 flex-shrink-0" />
           {t.imageInputCapture}
         </button>
         <input
