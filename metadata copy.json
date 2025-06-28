@@ -1,8 +1,0 @@
-{
-  "name": "MintMark AI",
-  "description": "Upload or capture images of your coins and receive a comprehensive numismatic analysis including grade, rarity, and market insights, powered by Gemini AI.",
-  "requestFramePermissions": [
-    "camera"
-  ],
-  "prompt": ""
-}
