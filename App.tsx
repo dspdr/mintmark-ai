@@ -10,7 +10,7 @@ import { SparklesIcon, InformationCircleIcon, CheckCircleIcon, ExternalLinkIcon 
 import { useTranslations } from './contexts/LanguageContext';
 import { translations } from './translations'; // To access available languages
 
-const initialCoinDetails: CoinDetails = {
+const initialCoinDetails: CoinDetails = { 
   year: '',
   denomination: '',
   country: '',
